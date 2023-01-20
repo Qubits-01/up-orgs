@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nesvier.upcapp.up_orgs.up_orgs">
+    package="com.nesvier.upcapp.up_orgs">
    <application
         android:label="up_orgs"
         android:name="${applicationName}"

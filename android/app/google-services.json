@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "367125848541",
+    "project_id": "up-orgs",
+    "storage_bucket": "up-orgs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367125848541:android:945aec1255aa05d55b5634",
+        "android_client_info": {
+          "package_name": "com.nesvier.upcapp.up_orgs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367125848541-i8n01leca630cgeultq19pr1guepheb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5hmYYe60FVj_ql5aB_F6zZwTtjDrgx8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367125848541-i8n01leca630cgeultq19pr1guepheb0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "367125848541-b25qmf2d30g22h0fp9g086e46n7v8jch.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nesvier.upcapp.uporgs.upOrgs"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

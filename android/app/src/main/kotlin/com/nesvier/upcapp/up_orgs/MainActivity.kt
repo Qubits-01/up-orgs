@@ -1,4 +1,4 @@
-package com.nesvier.upcapp.up_orgs.up_orgs
+package com.nesvier.upcapp.up_orgs
 
 import io.flutter.embedding.android.FlutterActivity
 
