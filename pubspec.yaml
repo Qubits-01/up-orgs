@@ -43,6 +43,10 @@ dependencies:
   # backend resources from abuse, such as billing fraud or phishing.
   firebase_app_check: ^0.1.1+8
 
+  # Flutter plugin for Firebase Auth, enabling Android and iOS authentication using
+  # passwords, phone numbers and identity providers like Google, Facebook and Twitter.
+  firebase_auth: ^4.2.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
