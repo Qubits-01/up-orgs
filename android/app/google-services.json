@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:367125848541:android:945aec1255aa05d55b5634",
+        "mobilesdk_app_id": "1:367125848541:android:2b8ea968e32c9cd65b5634",
         "android_client_info": {
-          "package_name": "com.nesvier.upcapp.up_orgs"
+          "package_name": "com.nesvier.up_orgs"
         }
       },
       "oauth_client": [

@@ -17,15 +17,24 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,41 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAXPgVlqPzrTS1trV9OkA62xw04kxV-X44',
-    appId: '1:367125848541:web:c58ffd891c0ec9225b5634',
-    messagingSenderId: '367125848541',
-    projectId: 'up-orgs',
-    authDomain: 'up-orgs.firebaseapp.com',
-    storageBucket: 'up-orgs.appspot.com',
-    measurementId: 'G-T93EV8P2RF',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyD5hmYYe60FVj_ql5aB_F6zZwTtjDrgx8M',
-    appId: '1:367125848541:android:945aec1255aa05d55b5634',
+    appId: '1:367125848541:android:2b8ea968e32c9cd65b5634',
     messagingSenderId: '367125848541',
     projectId: 'up-orgs',
     storageBucket: 'up-orgs.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCh3XecUWwpKervUvh6w3o5RYBebPQR2Oc',
-    appId: '1:367125848541:ios:f79c8c9dac2e0baa5b5634',
-    messagingSenderId: '367125848541',
-    projectId: 'up-orgs',
-    storageBucket: 'up-orgs.appspot.com',
-    iosClientId: '367125848541-utn2ks2ia0iocmsk88fgn9a38eh1ppi2.apps.googleusercontent.com',
-    iosBundleId: 'com.nesvier.upcapp.upOrgs',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCh3XecUWwpKervUvh6w3o5RYBebPQR2Oc',
-    appId: '1:367125848541:ios:f79c8c9dac2e0baa5b5634',
-    messagingSenderId: '367125848541',
-    projectId: 'up-orgs',
-    storageBucket: 'up-orgs.appspot.com',
-    iosClientId: '367125848541-utn2ks2ia0iocmsk88fgn9a38eh1ppi2.apps.googleusercontent.com',
-    iosBundleId: 'com.nesvier.upcapp.upOrgs',
   );
 }
