@@ -24,7 +24,7 @@ class FullName extends Equatable {
   String get middleName => _middleName;
   String get lastName => _lastName;
   String? get suffix => _suffix;
-  String get middleInitial => _lastName[0];
+  String get middleInitial => _middleName[0];
 
   String get fullNameFnMiLnS {
     String suffixPart = (suffix == null) ? '' : ', $suffix';
