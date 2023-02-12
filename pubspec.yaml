@@ -71,6 +71,10 @@ dependencies:
   # fully documented, tested, and with examples.
   fpdart: ^0.4.0
 
+  # A Dart package that helps to implement value based equality without needing to explicitly
+  # override == and hashCode.
+  equatable: ^2.0.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
