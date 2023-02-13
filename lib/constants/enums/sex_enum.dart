@@ -1,0 +1,4 @@
+enum SexEnum {
+  female,
+  male,
+}

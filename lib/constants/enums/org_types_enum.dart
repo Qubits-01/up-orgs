@@ -13,6 +13,8 @@ enum OrgTypesEnum {
   specialInterest('Special Interest'),
   sportsAndRecreationCluster('Sports and Recreation Cluster');
 
+  // TODO: Add more org types or perhaps deprecate some of the irrelevant org types.
+
   const OrgTypesEnum(this.name);
   final String name;
 }
