@@ -1,4 +1,4 @@
-import '../../authentication/domain/entities/user_entity.dart';
+import '../../domain/entities/user_entity.dart';
 
 class UserModel extends UserEntity {
   // TODO: Add tests for this class.
