@@ -8,7 +8,7 @@ import 'package:equatable/equatable.dart';
 class Email extends Equatable {
   // TODO: Add tests for this class.
 
-  const Email({required email, isVerified = false})
+  const Email(email, {isVerified = false})
       : _email = email,
         _isVerified = isVerified;
 
