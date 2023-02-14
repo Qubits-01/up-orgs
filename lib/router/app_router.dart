@@ -19,23 +19,23 @@ class AppRouter {
       ),
       GoRoute(
         path: LoginScreen.routeName,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, __) => const LoginScreen(),
       ),
       GoRoute(
         path: SignUpScreen.routeName,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, __) => const SignUpScreen(),
       ),
       GoRoute(
         path: HomeScreen.routeName,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, __) => const HomeScreen(),
       ),
       GoRoute(
         path: UnderDevelopmentScreen.routeName,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, __) => const UnderDevelopmentScreen(),
       ),
       GoRoute(
         path: PageNotFoundScreen.routeName,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, __) => const PageNotFoundScreen(),
       ),
     ],
   );
