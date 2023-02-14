@@ -9,8 +9,6 @@ import '../../../../interfaces/entity_intf.dart';
 /// If you need to change the fields, then you must create a new instance of
 /// this class alongside with the new field values.
 class UserEntity implements EntityIntf {
-  // TODO: Add tests for this class.
-
   const UserEntity({
     required String uid,
     required String username,

@@ -6,8 +6,6 @@ import 'package:equatable/equatable.dart';
 /// must create a new instance of this class alongside with the new
 /// field values.
 class Email extends Equatable {
-  // TODO: Add tests for this class.
-
   const Email(email, {isVerified = false})
       : _email = email,
         _isVerified = isVerified;
