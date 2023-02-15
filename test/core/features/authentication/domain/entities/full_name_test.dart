@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:up_orgs/utils/full_name.dart';
+import 'package:up_orgs/core/features/authentication/domain/entities/full_name.dart';
 
 void main() {
   group('[FullName]', () {

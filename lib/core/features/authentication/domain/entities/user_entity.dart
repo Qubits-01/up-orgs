@@ -1,8 +1,8 @@
 import '../../../../../constants/enums/account_types_enum.dart';
 import '../../../../../constants/enums/sex_enum.dart';
-import '../../../../../utils/email.dart';
-import '../../../../../utils/full_name.dart';
 import '../../../../interfaces/entity_intf.dart';
+import 'email.dart';
+import 'full_name.dart';
 
 /// A class that represents a user entity.
 /// This class is immutable by design in order to prevent accidental changes.

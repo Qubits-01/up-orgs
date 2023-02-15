@@ -3,8 +3,8 @@ import 'package:up_orgs/constants/enums/account_types_enum.dart';
 import 'package:up_orgs/constants/enums/sex_enum.dart';
 import 'package:up_orgs/core/features/authentication/domain/entities/user_entity.dart';
 import 'package:up_orgs/core/interfaces/entity_intf.dart';
-import 'package:up_orgs/utils/email.dart';
-import 'package:up_orgs/utils/full_name.dart';
+import 'package:up_orgs/core/features/authentication/domain/entities/email.dart';
+import 'package:up_orgs/core/features/authentication/domain/entities/full_name.dart';
 
 void main() {
   group('[UserEntity]', () {
