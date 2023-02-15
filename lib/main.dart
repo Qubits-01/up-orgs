@@ -4,14 +4,18 @@ import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
 import 'router/app_router.dart';
+import 'service_locator/service_locator.dart' as sl;
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await FirebaseAppCheck.instance.activate(
     androidProvider: AndroidProvider.debug,
   );
+
+  // Initialize the services/dependencies.
+  await sl.initializeServices();
 
   runApp(const App());
 }
