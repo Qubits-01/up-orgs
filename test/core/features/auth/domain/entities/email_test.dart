@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:up_orgs/core/features/authentication/domain/entities/email.dart';
+import 'package:up_orgs/core/features/auth/domain/entities/email.dart';
 
 void main() {
   group('[Email]', () {

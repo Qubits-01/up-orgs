@@ -1,3 +1,7 @@
+import '../../../../../constants/enums/account_types_enum.dart';
+import '../../../../../constants/enums/sex_enum.dart';
+import '../../domain/entities/email.dart';
+import '../../domain/entities/full_name.dart';
 import '../../domain/entities/user_entity.dart';
 
 class UserModel extends UserEntity {
@@ -42,5 +46,27 @@ class UserModel extends UserEntity {
       'fullName': fullName,
       'sex': sex,
     };
+  }
+
+  factory UserModel.fromCustomInput({
+    required String uid,
+    required String username,
+    required AccountTypesEnum accountType,
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    List<Email>? emails,
+    FullName? fullName,
+    SexEnum? sex,
+  }) {
+    return UserModel._(
+      uid: uid,
+      username: username,
+      accountType: accountType,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      emails: emails,
+      fullName: fullName,
+      sex: sex,
+    );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 
-import '../core/features/authentication/presentation/screens/login_screen.dart';
-import '../core/features/authentication/presentation/screens/sign_up_screen.dart';
+import '../core/features/auth/presentation/screens/login_screen.dart';
+import '../core/features/auth/presentation/screens/sign_up_screen.dart';
 import '../core/screens/empty_state_screens/under_development_screen.dart';
 import '../core/screens/error_screens/page_not_found_screen.dart';
 import '../features/home/presentation/screens/home_screen.dart';
