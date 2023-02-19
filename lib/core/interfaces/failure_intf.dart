@@ -9,8 +9,8 @@ abstract class FailureIntf extends Equatable {
   // TODO: Add test on this abstract class.
 
   const FailureIntf({
-    required title,
-    required message,
+    required String title,
+    required String message,
   })  : _title = title,
         _message = message;
 

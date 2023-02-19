@@ -1,10 +1,11 @@
-import 'package:up_orgs/core/interfaces/params_intf.dart';
+import 'params_intf.dart';
 
 abstract class UseCaseIntf<T, P> {
   // TODO: Add test on this abstract class.
 
   const UseCaseIntf();
 
+  /// Every use case should have a call method (i.e., callable classes).
   dynamic call(P params);
 }
 

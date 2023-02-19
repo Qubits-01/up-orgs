@@ -9,9 +9,9 @@ abstract class ExceptionIntf extends Equatable implements Exception {
   // TODO: Add test on this abstract class.
 
   const ExceptionIntf({
-    required title,
-    required message,
-    required stackTrace,
+    required String title,
+    required String message,
+    required StackTrace stackTrace,
   })  : _title = title,
         _message = message,
         _stackTrace = stackTrace;
@@ -23,4 +23,7 @@ abstract class ExceptionIntf extends Equatable implements Exception {
   String get title => _title;
   String get message => _message;
   StackTrace get stackTrace => _stackTrace;
+
+  @override
+  List<Object?> get props => [_title, _message, _stackTrace];
 }
