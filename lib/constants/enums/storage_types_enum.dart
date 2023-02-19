@@ -1,5 +1,6 @@
 enum StorageTypesEnum {
-  cloud,
+  generalCloud,
+  firebase,
   appSpecific,
   externalSd,
   sharedPreferences,

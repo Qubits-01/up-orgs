@@ -21,5 +21,5 @@ abstract class FailureIntf extends Equatable {
   String get message => _message;
 
   @override
-  List<Object?> get props => [_title, _message];
+  List<Object?> get props => [title, message];
 }
