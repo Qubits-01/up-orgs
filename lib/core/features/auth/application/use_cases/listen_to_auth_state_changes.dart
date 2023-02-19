@@ -1,5 +1,5 @@
 import '../../../../interfaces/use_case_intf.dart';
-import '../entities/user_entity.dart';
+import '../../domain/entities/user_entity.dart';
 
 class ListenToAuthStateChanges implements UseCaseIntf<UserEntity, NoParams> {
   @override

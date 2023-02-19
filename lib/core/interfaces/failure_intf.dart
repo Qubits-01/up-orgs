@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// This abstract class should only be "extended" and not "implemented."
+/// This abstract class should only be "extended" and not "implemented"
 /// by an another class.
 /// Properties _title and _message are required for every [FailureIntf] objects.
 /// You can add more properties on the concrete implementation of this [FailureIntf]

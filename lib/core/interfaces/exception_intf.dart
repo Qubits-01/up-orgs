@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// This abstract class should only be "extended" and not "implemented."
+/// This abstract class should only be "extended" and not "implemented"
 /// by an another class.
 /// Properties _title,  _message, and _stackTrace are required for every [ExceptionIntf] objects.
 /// You can add more properties on the concrete implementation of this [ExceptionIntf]

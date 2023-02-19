@@ -1,10 +1,10 @@
 import 'package:fpdart/fpdart.dart';
-import '../../../../failures/auth_failure.dart';
-import '../../data/repo_impl/auth_repo_impl.dart';
 
+import '../../../../failures/auth_failure.dart';
 import '../../../../interfaces/params_intf.dart';
 import '../../../../interfaces/use_case_intf.dart';
-import '../entities/user_entity.dart';
+import '../../data/repo_impl/auth_repo_impl.dart';
+import '../../domain/entities/user_entity.dart';
 
 typedef ThisUseCase = UseCaseIntf<UserEntity, Params>;
 
