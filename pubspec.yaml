@@ -109,9 +109,18 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/licenses/
+
+    # Since these files are listed as assets, there is no need to list them
+    # in the fonts section of the pubspec.yaml. This can be done because
+    # the files are consistently named from the Google Fonts API
+    # (so be sure not to rename them!).
+    # Ref: https://pub.dev/packages/google_fonts
+    - assets/fonts/montserrat/
+
+    - assets/images/logos/
+    - assets/images/backgrounds/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+/// Ref: https://drive.google.com/drive/folders/1rXCbUuun0VqexHmjBmdceYx4IiltbmOh?usp=sharing
 class AppColors {
   const AppColors._();
 
