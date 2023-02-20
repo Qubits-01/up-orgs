@@ -15,7 +15,7 @@ class AuthRepoImpl implements AuthRepoIntf {
   final AuthProviderImpl _authProvider;
 
   @override
-  ThisUserEntity createUserWithEmailAndPasswordUseCase({
+  FutureUserEntity createUserWithEmailAndPasswordUseCase({
     required String email,
     required String password,
   }) async {
@@ -34,6 +34,7 @@ class AuthRepoImpl implements AuthRepoIntf {
         accountType: userModel.accountType,
         createdAt: userModel.createdAt,
         updatedAt: userModel.updatedAt,
+        isSignedIn: userModel.isSignedIn,
       );
     } catch (e) {
       // TODO: Improve exception/error details. Preferably, user FirebaseAuth defaults.
@@ -44,5 +45,11 @@ class AuthRepoImpl implements AuthRepoIntf {
     }
 
     return Right(userEntity);
+  }
+
+  @override
+  StreamUserEntity listenToUserChangesUseCase() {
+    // TODO: implement listenToUserChangesUseCase
+    throw UnimplementedError();
   }
 }
