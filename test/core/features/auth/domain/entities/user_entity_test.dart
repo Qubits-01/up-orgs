@@ -40,6 +40,7 @@ void main() {
         accountType: tAccountType,
         createdAt: tCreatedAt,
         updatedAt: tUpdatedAt,
+        isSignedIn: true,
         emails: tEmails,
         fullName: tFullName,
         sex: tSex,
@@ -52,6 +53,7 @@ void main() {
         accountType: tAccountType,
         createdAt: tCreatedAt,
         updatedAt: tUpdatedAt,
+        isSignedIn: true,
       );
     });
 

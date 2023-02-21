@@ -1,5 +1,5 @@
 name: up_orgs
-description: A new Flutter project.
+description: A one-stop destination for everything about University of the Philippines' various organizations.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -17,7 +17,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 0.1.0+1
 
 environment:
   sdk: ">=2.18.6 <3.0.0"
@@ -79,6 +79,10 @@ dependencies:
   # Supports HTTP fetching, caching, and asset bundling.
   google_fonts: ^4.0.3
 
+  # Explicitly reads environment variables into a dart file from a .env file for more security
+  # and faster start up times.
+  envied: ^0.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -97,6 +101,12 @@ dev_dependencies:
   # A Dart mock library which simplifies mocking with null safety support and
   # no manual mocks or code generation.
   mocktail: ^0.3.0
+
+  # Generator for the Envied package. See https://pub.dev/packages/envied.
+  envied_generator: ^0.3.0
+
+  # A build system for Dart code generation and modular compilation.
+  build_runner: ^2.3.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

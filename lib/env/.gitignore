@@ -1,0 +1,4 @@
+# Exclude all .env files and the files generated from it.
+# In other words, do not upload secrets (API keys).
+*.env
+env.g.dart
