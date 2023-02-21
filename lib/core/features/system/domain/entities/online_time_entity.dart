@@ -1,13 +1,20 @@
+import '../../../../../constants/enums/online_time_source_enum.dart';
 import '../../../../interfaces/entity_intf.dart';
 
 class OnlineTimeEntity implements EntityIntf {
   // TODO: Add test on this class.
 
-  const OnlineTimeEntity({required DateTime dateTime}) : _dateTime = dateTime;
+  const OnlineTimeEntity({
+    required DateTime dateTime,
+    required OnlineTimeSourceEnum onlineTimeSource,
+  })  : _dateTime = dateTime,
+        _onlineTimeSource = onlineTimeSource;
 
   final DateTime _dateTime;
+  final OnlineTimeSourceEnum _onlineTimeSource;
 
   DateTime get dateTime => _dateTime;
+  OnlineTimeSourceEnum get onlineTimeSource => _onlineTimeSource;
 
   int get year => dateTime.year;
   int get month => dateTime.month;
