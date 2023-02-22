@@ -1,13 +1,16 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../interfaces/failure_intf.dart';
+import '../../../../failures/online_time_failure.dart';
 import '../entities/coordinate.dart';
 import '../entities/online_time_entity.dart';
+
+typedef FutureOnlineTimeEntity
+    = Future<Either<OnlineTimeFailure, OnlineTimeEntity>>;
 
 abstract class SystemRepoIntf {
   const SystemRepoIntf();
 
-  Future<Either<FailureIntf, OnlineTimeEntity>> getOnlineTimeUseCase({
+  FutureOnlineTimeEntity getOnlineTimeUseCase({
     timeZone = 'Asia/Manila',
     String? ipAddress,
     Coordinate? coordinate,
