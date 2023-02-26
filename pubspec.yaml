@@ -83,6 +83,15 @@ dependencies:
   # and faster start up times.
   envied: ^0.3.0
 
+  # A powerful HTTP package for Dart/Flutter, which supports Global settings, Interceptors,
+  # FormData, Aborting and canceling a request, Files uploading and downloading,
+  # Requests timeout, Custom adapters, etc.
+  dio: ^5.0.1
+
+  # An SVG rendering and widget library for Flutter, which allows painting and
+  # displaying Scalable Vector Graphics 1.1 files.
+  flutter_svg: ^2.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -131,6 +140,8 @@ flutter:
 
     - assets/images/logos/
     - assets/images/backgrounds/
+    - assets/images/visual_elements/
+    - assets/images/icons/icons8-google-color/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

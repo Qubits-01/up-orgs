@@ -83,6 +83,7 @@ class TimeApiProvider extends OnlineTimeProviderIntf {
       );
     }
 
+    // TODO: Fix the json map contents (it does not align with the OnlineTimeModel).
     onlineTimeModel = OnlineTimeModel.fromJsonMap(json.decode(response.data));
 
     return onlineTimeModel;

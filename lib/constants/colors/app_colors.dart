@@ -8,8 +8,8 @@ class AppColors {
 
   static const Color neutralColorLight = white;
   static const Color neutralColorDark = steel;
-  static const Color callToActionColor = maroon;
-  static const Color primaryColor = green;
+  static const Color callToActionColor = green;
+  static const Color primaryColor = maroon;
 
   // Digital identity colors of UP.
   static const Color maroon = Color(0xff76090c);

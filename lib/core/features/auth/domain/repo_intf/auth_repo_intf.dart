@@ -7,6 +7,8 @@ typedef FutureUserEntity = Future<Either<AuthFailure, UserEntity>>;
 typedef StreamUserEntity = Stream<Either<AuthFailure, UserEntity>>;
 
 abstract class AuthRepoIntf {
+  // Add test on this abstract class.
+
   const AuthRepoIntf();
 
   FutureUserEntity createUserWithEmailAndPasswordUseCase({

@@ -8,7 +8,8 @@ class AppTheme {
 
   static final lightTheme = ThemeData(
     brightness: Brightness.light,
-    primaryColor: AppColors.primaryColor,
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.maroon),
+    splashColor: AppColors.maroon,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     fontFamily: 'Montserrat',
 
@@ -16,6 +17,10 @@ class AppTheme {
     // which is in compliant with the Material Design spec.
     // Ref: https://api.flutter.dev/flutter/material/TextTheme-class.html
     textTheme: GoogleFonts.montserratTextTheme(),
+
+    // inputDecorationTheme: InputDecorationTheme(
+    //   focusColor: AppColors.green,
+    // ),
   );
 
   static final darkTheme = ThemeData(

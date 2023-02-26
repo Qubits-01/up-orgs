@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:up_orgs/core/features/auth/presentation/screens/login_screen.dart';
 
 import '../../../../constants/colors/app_colors.dart';
 import '../../../home/presentation/screens/home_screen.dart';
@@ -24,14 +25,14 @@ class _SplashScreenState extends State<SplashScreen> {
     // startup (also possibly with a minimum duration time).
     Future.delayed(
       const Duration(seconds: 2),
-      () => GoRouter.of(context).go(HomeScreen.routeName),
+      () => GoRouter.of(context).go(LoginScreen.routeName),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.callToActionColor,
+      backgroundColor: AppColors.primaryColor,
       body: Center(
         child: Text(
           'UP-Orgs',
