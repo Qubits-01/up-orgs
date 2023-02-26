@@ -92,6 +92,10 @@ dependencies:
   # displaying Scalable Vector Graphics 1.1 files.
   flutter_svg: ^2.0.2
 
+  # Customize Flutter's default white native splash screen with background color
+  # and splash image. Supports dark mode, full screen, and more.
+  flutter_native_splash: ^2.2.18
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
