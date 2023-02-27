@@ -96,6 +96,10 @@ dependencies:
   # and splash image. Supports dark mode, full screen, and more.
   flutter_native_splash: ^2.2.18
 
+  # A command-line tool that simplifies the task of updating your
+  # Flutter app's launcher icon.
+  icons_launcher: ^2.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

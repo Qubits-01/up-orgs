@@ -1,0 +1,15 @@
+icons_launcher:
+  image_path: "assets/images/icons/launcher_icons/12145623_Wavy_Edu-06_Single-05.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
+    macos:
+      enable: true
+    windows:
+      enable: true
+    web:
+      enable: true
+    linux:
+      enable: true
