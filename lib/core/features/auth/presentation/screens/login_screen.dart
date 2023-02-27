@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../constants/colors/app_colors.dart';
 
+// TODO: Make this Widget lean.
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login';
 
@@ -12,6 +13,10 @@ class LoginScreen extends StatelessWidget {
       'assets/images/visual_elements/undraw_login_re_4vu2.svg';
   final googleIconPath =
       'assets/images/icons/icons8-google-color/icons8-google-48.svg';
+  final facebookIconPath =
+      'assets/images/icons/icons8-facebook-windows-11-color/icons8-facebook-48.svg';
+  final anonymousIconPath =
+      'assets/images/icons/icons8-incognito-those-icons-fill/icons8-incognito-48.png';
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +24,11 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: AppColors.white,
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          return SingleChildScrollView(
-            child: Container(
+          return SizedBox(
+            height: constraints.maxHeight,
+            width: constraints.maxWidth,
+            child: SingleChildScrollView(
               padding: const EdgeInsets.all(24.0),
-              height: constraints.maxHeight,
-              width: constraints.maxWidth,
               child: Column(
                 children: [
                   Column(
@@ -94,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                                 .labelMedium
                                 ?.copyWith(
                                   color: AppColors.green,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w900,
                                 ),
                           ),
                           onTap: () {
@@ -110,10 +115,9 @@ class LoginScreen extends StatelessWidget {
                         height: 50.0,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10.0),
-                          child: TextButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(
-                                  Theme.of(context).colorScheme.primary),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0.0,
                             ),
                             onPressed: () {},
                             child: Text(
@@ -133,7 +137,7 @@ class LoginScreen extends StatelessWidget {
 
                       // Or Divider.
                       Row(
-                        children: [
+                        children: <Widget>[
                           const Expanded(child: Divider()),
                           Text(
                             'OR',
@@ -164,7 +168,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             child: Stack(
-                              children: [
+                              children: <Widget>[
                                 Align(
                                   alignment: Alignment.centerLeft,
                                   child: Padding(
@@ -196,6 +200,52 @@ class LoginScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 10.0),
 
+                      // Login with Facebook button.
+                      SizedBox(
+                        width: constraints.maxWidth,
+                        height: 50.0,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: TextButton(
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                Colors.green[50],
+                              ),
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: SvgPicture.asset(
+                                      facebookIconPath,
+                                      semanticsLabel: 'Facebook Icon',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Login with Facebook',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .labelLarge
+                                        ?.copyWith(
+                                          color: AppColors.deepGray,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 10.0),
+
                       // Login Anonymously.
                       SizedBox(
                         width: constraints.maxWidth,
@@ -210,14 +260,14 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             child: Stack(
-                              children: [
+                              children: <Widget>[
                                 Align(
                                   alignment: Alignment.centerLeft,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(left: 16.0),
-                                    child: SvgPicture.asset(
-                                      googleIconPath,
-                                      semanticsLabel: 'Google Icon',
+                                    padding: const EdgeInsets.only(left: 24.0),
+                                    child: Image.asset(
+                                      anonymousIconPath,
+                                      semanticLabel: 'Anonymous Icon',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -246,8 +296,22 @@ class LoginScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('New to Logistics?'),
-                          Text('Sign Up'),
+                          const Text('New to Logistics? '),
+                          GestureDetector(
+                            onTap: () {
+                              // Go to Sign-Up screen.
+                            },
+                            child: Text(
+                              'Sign Up',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .labelMedium
+                                  ?.copyWith(
+                                    color: AppColors.green,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                          ),
                         ],
                       )
                     ],

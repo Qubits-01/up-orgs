@@ -145,7 +145,11 @@ flutter:
     - assets/images/logos/
     - assets/images/backgrounds/
     - assets/images/visual_elements/
+    - assets/images/icons/
     - assets/images/icons/icons8-google-color/
+    - assets/images/icons/icons8-facebook-windows-11-color/
+    - assets/images/icons/icons8-incognito-those-icons-fill/
+    - assets/images/icons/launcher_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -158,17 +162,70 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+  fonts:
+    # There is a need to explicitly list the fonts here after all. This
+    # is because of the bug in the google_fonts package (i.e, some font
+    # weights are not showing/working properly when it is being used
+    # in the app).
+    # Bug ref: https://github.com/material-foundation/flutter-packages/issues/35
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/montserrat/Montserrat-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/montserrat/Montserrat-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/montserrat/Montserrat-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/montserrat/Montserrat-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/montserrat/Montserrat-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/montserrat/Montserrat-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/montserrat/Montserrat-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/montserrat/Montserrat-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/montserrat/Montserrat-Black.ttf
+          weight: 900
+        - asset: assets/fonts/montserrat/Montserrat-BlackItalic.ttf
+          weight: 900
+          style: italic
+
+    # - family: Schyler
+    #   fonts:
+    #     - asset: fonts/Schyler-Regular.ttf
+    #     - asset: fonts/Schyler-Italic.ttf
+    #       style: italic
+    # - family: Trajan Pro
+    #   fonts:
+    #     - asset: fonts/TrajanPro.ttf
+    #     - asset: fonts/TrajanPro_Bold.ttf
+    #       weight: 700
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
