@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 /// Ref: https://drive.google.com/drive/folders/1rXCbUuun0VqexHmjBmdceYx4IiltbmOh?usp=sharing
@@ -12,16 +10,23 @@ class AppColors {
   static const Color primaryColor = maroon;
 
   // Digital identity colors of UP.
-  static const Color maroon = Color(0xff76090c);
-  static const Color green = Color(0xff0a4424);
-  static const Color yellow = Color(0xfff5ab29);
-  static const Color brownOlive = Color(0xff7c6028);
+  static const maroon = Color(0xff76090c);
+  static const green = Color(0xff0a4424);
+  static const yellow = Color(0xfff5ab29);
+  static const brownOlive = Color(0xff7c6028);
 
-  static const Color white = Color(0xffffffff);
-  static const Color gray = Color(0xffa9a9a9);
-  static const Color deepGray = Color(0xff656565);
-  static const Color darkGray = Color(0xff3a3a3a);
-  static const Color steel = Color(0xff202020);
+  static const white = Color(0xffffffff);
+  static const gray = Color(0xffa9a9a9);
+  static const deepGray = Color(0xff656565);
+  static const darkGray = Color(0xff3a3a3a);
+  static const steel = Color(0xff202020);
+
+  // Onboarding Screens Colors
+  static const backgroundColor2 = Color(0xFF17203A);
+  static const backgroundColorLight = Color(0xFFF2F6FF);
+  static const backgroundColorDark = Color(0xFF25254B);
+  static const shadowColorLight = Color(0xFF4A5367);
+  static const shadowColorDark = Colors.black;
 }
 
 extension HexColor on Color {

@@ -100,6 +100,10 @@ dependencies:
   # Flutter app's launcher icon.
   icons_launcher: ^2.1.0
 
+  # Rive 2 Flutter Runtime. This package provides runtime functionality for playing back
+  # and interacting with animations built with the Rive editor available at https://rive.app.
+  rive: ^0.10.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -137,9 +141,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/licenses/
-    - assets/rive/
-
     # Since these files are listed as assets, there is no need to list them
     # in the fonts section of the pubspec.yaml. This can be done because
     # the files are consistently named from the Google Fonts API
@@ -147,14 +148,18 @@ flutter:
     # Ref: https://pub.dev/packages/google_fonts
     - assets/fonts/montserrat/
 
-    - assets/images/logos/
+    - assets/images/avatars/
     - assets/images/backgrounds/
-    - assets/images/visual_elements/
     - assets/images/icons/
     - assets/images/icons/icons8-google-color/
     - assets/images/icons/icons8-facebook-windows-11-color/
     - assets/images/icons/icons8-incognito-those-icons-fill/
     - assets/images/icons/launcher_icons/
+    - assets/images/logos/
+    - assets/images/visual_elements/
+
+    - assets/licenses/
+    - assets/rive/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -228,9 +233,9 @@ flutter:
 
     - family: Inter
       fonts:
-        - asset: assets/fonts/inter/Inter-Regular.tff
+        - asset: assets/fonts/inter/Inter-Regular.ttf
           weight: 400
-        - asset: assets/fonts/inter/Inter-SemiBold.tff
+        - asset: assets/fonts/inter/Inter-SemiBold.ttf
           weight: 600
 
     # - family: Schyler

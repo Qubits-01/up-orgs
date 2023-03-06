@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:up_orgs/core/features/auth/presentation/screens/login_screen.dart';
 
 import '../../../../constants/colors/app_colors.dart';
-import '../../../home/presentation/screens/home_screen.dart';
+import '../../../onboarding/presentation/screens/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = '/';
@@ -25,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // startup (also possibly with a minimum duration time).
     Future.delayed(
       const Duration(seconds: 2),
-      () => GoRouter.of(context).go(LoginScreen.routeName),
+      () => GoRouter.of(context).go(OnboardingScreen.routeName),
     );
   }
 
