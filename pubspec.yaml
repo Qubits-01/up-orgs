@@ -138,6 +138,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/licenses/
+    - assets/rive/
 
     # Since these files are listed as assets, there is no need to list them
     # in the fonts section of the pubspec.yaml. This can be done because
@@ -219,6 +220,18 @@ flutter:
         - asset: assets/fonts/montserrat/Montserrat-BlackItalic.ttf
           weight: 900
           style: italic
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-bold.ttf
+          weight: 700
+
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Regular.tff
+          weight: 400
+        - asset: assets/fonts/inter/Inter-SemiBold.tff
+          weight: 600
 
     # - family: Schyler
     #   fonts:

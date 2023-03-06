@@ -25,9 +25,11 @@ Future<void> main() async {
   // Initialize services/dependencies.
   await sl.initializeServices();
 
+  // TODO: Add the other font licenses.
   // Add Licenses.
   LicenseRegistry.addLicense(() async* {
-    final license = await rootBundle.loadString('assets/licenses/OFL.txt');
+    final license =
+        await rootBundle.loadString('assets/licenses/OFL-montserrat.txt');
     yield LicenseEntryWithLineBreaks(['montserrat'], license);
   });
 
