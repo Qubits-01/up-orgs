@@ -7,6 +7,7 @@ import '../core/screens/empty_state_screens/under_development_screen.dart';
 import '../core/screens/error_screens/page_not_found_screen.dart';
 import '../features/home/presentation/screens/home_screen.dart';
 import '../features/onboarding/presentation/screens/onboarding_screen.dart';
+import '../features/onboarding/presentation/screens/persistent_onboarding_screen.dart';
 import '../features/splash_startup/presentation/screens/splash_screen.dart';
 
 /// GoRouter configuration.
@@ -22,6 +23,10 @@ class AppRouter {
       GoRoute(
         path: OnboardingScreen.routeName,
         builder: (_, __) => const OnboardingScreen(),
+      ),
+      GoRoute(
+        path: PersistentOnboardingScreen.routeName,
+        builder: (_, __) => const PersistentOnboardingScreen(),
       ),
       GoRoute(
         path: LoginScreen.routeName,

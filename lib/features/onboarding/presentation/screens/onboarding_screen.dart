@@ -1,96 +1,222 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:rive/rive.dart';
-
-import '../../../../core/features/auth/presentation/screens/login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
   static const routeName = '/onboarding';
 
-  final movingShapesPath = 'assets/rive/shapes.riv';
-  final splinePath = 'assets/images/backgrounds/Spline.png';
+  final maroonClothPath = 'assets/images/backgrounds/maroon-cloth.jpg';
+  final loadingBookPath = 'assets/rive/113-173-loading-book.riv';
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  bool isPrevPressed = false;
+  bool isNextPressed = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          // Blur moving background.
-          Positioned(
-            width: MediaQuery.of(context).size.width * 1.7,
-            bottom: 200.0,
-            left: 100.0,
-            child: Image.asset(widget.splinePath),
-          ),
-          Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 20.0, sigmaY: 10.0),
-              // Covers the entire screen (implicit height and width).
-              child: const SizedBox(),
-            ),
-          ),
-          RiveAnimation.asset(widget.movingShapesPath),
-          Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 30.0, sigmaY: 10.0),
-              child: const SizedBox(),
-            ),
-          ),
-
-          // Foreground text.
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0),
-              child: SizedBox(
-                width: 260.0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    const SizedBox(height: 100.0),
-                    Text(
-                      'Find your home',
-                      style: TextStyle(
-                        fontSize:
-                            Theme.of(context).textTheme.displayMedium?.fontSize,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Poppins',
-                        height: 1.2,
-                      ),
+      body: LayoutBuilder(builder: (
+        BuildContext context,
+        BoxConstraints constraints,
+      ) {
+        return PageView(
+          children: <Widget>[
+            Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                // Maroon themed background (w/ glass morphism effect).
+                Container(
+                  width: constraints.maxWidth,
+                  height: constraints.maxHeight,
+                  decoration: BoxDecoration(
+                    // color: AppColors.maroon,
+                    // gradient: LinearGradient(
+                    //   colors: <Color>[
+                    //     AppColors.maroon,
+                    //     Colors.black,
+                    //   ],
+                    //   begin: Alignment.center,
+                    //   end: Alignment.topRight,
+                    // ),
+                    image: DecorationImage(
+                      image: AssetImage(widget.maroonClothPath),
+                      fit: BoxFit.cover,
                     ),
-                    const SizedBox(height: 16.0),
-                    Text(
-                      'Here at UP-Orgs, we aim to provide a platform for UP students to find a home where they belong.',
-                      style: Theme.of(context).textTheme.labelLarge,
+                  ),
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 20.0),
+                    child: SizedBox(
+                      width: constraints.maxWidth,
+                      height: constraints.maxHeight,
                     ),
-                    const SizedBox(height: 200.0),
-
-                    // Let's Go button.
-                    SizedBox(
-                      width: 200.0,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          GoRouter.of(context).push(LoginScreen.routeName);
-                        },
-                        style: ElevatedButton.styleFrom(elevation: 0.0),
-                        child: const Text('Let\'s Go'),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+
+                // Foreground.
+                SizedBox(
+                  width: constraints.maxWidth,
+                  height: constraints.maxHeight,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      // Eye-catching picture.
+                      SizedBox(
+                        width: 200.0,
+                        height: 200.0,
+                        child: RiveAnimation.asset(
+                          widget.loadingBookPath,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                Positioned(
+                  top: 60.0,
+                  left: 25.0,
+                  right: 25.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      // Skip button.
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0,
+                          vertical: 7.0,
+                        ),
+                        decoration: BoxDecoration(
+                          color: const Color(0xff562424),
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: Text(
+                          'Skip',
+                          style:
+                              Theme.of(context).textTheme.labelLarge?.copyWith(
+                                    color: Colors.white70,
+                                  ),
+                        ),
+                      ),
+
+                      // Progress indicator.
+                      // TODO: Make this a dynamic widget.
+                      Row(
+                        children: <Widget>[
+                          Container(
+                            width: 20.0,
+                            height: 4.0,
+                            margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(
+                              color: const Color(0xff330000),
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          Container(
+                            width: 12.0,
+                            height: 4.0,
+                            margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(
+                              color: const Color(0xff1a0000),
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          Container(
+                            width: 12.0,
+                            height: 4.0,
+                            margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(
+                              color: const Color(0xff1a0000),
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          Container(
+                            width: 12.0,
+                            height: 4.0,
+                            margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(
+                              color: const Color(0xff1a0000),
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Prev and Next buttons.
+                Positioned(
+                  bottom: 50.0,
+                  child: Row(
+                    children: <Widget>[
+                      // Previous button.
+                      GestureDetector(
+                        onTapDown: (_) {
+                          setState(() => isPrevPressed = true);
+                        },
+                        onTapUp: (_) {
+                          setState(() => isPrevPressed = false);
+                        },
+                        child: Container(
+                          width: 80.0,
+                          height: 60.0,
+                          decoration: BoxDecoration(
+                            color:
+                                Color(isPrevPressed ? 0xff192841 : 0xff152238),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(16.0),
+                              bottomLeft: Radius.circular(16.0),
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.arrow_back_rounded,
+                            color:
+                                isPrevPressed ? Colors.white : Colors.white70,
+                          ),
+                        ),
+                      ),
+
+                      // Next button.
+                      GestureDetector(
+                        onTapDown: (_) {
+                          setState(() => isNextPressed = true);
+                        },
+                        onTapUp: (_) {
+                          setState(() => isNextPressed = false);
+                        },
+                        child: Container(
+                          width: 80.0,
+                          height: 60.0,
+                          decoration: BoxDecoration(
+                            color:
+                                Color(isNextPressed ? 0xff192841 : 0xff152238),
+                            borderRadius: const BorderRadius.only(
+                              topRight: Radius.circular(16.0),
+                              bottomRight: Radius.circular(16.0),
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.arrow_forward_rounded,
+                            color:
+                                isNextPressed ? Colors.white : Colors.white70,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
+          ],
+        );
+      }),
     );
   }
 }
