@@ -104,6 +104,9 @@ dependencies:
   # and interacting with animations built with the Rive editor available at https://rive.app.
   rive: ^0.10.2
 
+  # A plugin for handling Vibration API on iOS, Android, and web.
+  vibration: ^1.7.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
