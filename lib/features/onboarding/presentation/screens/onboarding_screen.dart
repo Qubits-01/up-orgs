@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:up_orgs/features/onboarding/presentation/screens/persistent_onboarding_screen.dart';
 
 import 'onboarding_first_entry.dart';
 import 'onboarding_second_entry.dart';
@@ -9,6 +10,7 @@ class OnboardingScreen extends StatefulWidget {
 
   static const routeName = '/onboarding';
 
+  // TODO: Make a OnboardingEntryEntity for this.
   final firstEntryImage =
       'assets/images/visual_elements/undraw_studying_re_deca.svg';
   final firstEntryMainText = 'Discover 200+ Orgs with us';
@@ -58,6 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               mainText: widget.firstEntryMainText,
               descriptionText: widget.firstEntryDescriptionText,
             ),
+            const PersistentOnboardingScreen(),
           ],
         );
       }),
