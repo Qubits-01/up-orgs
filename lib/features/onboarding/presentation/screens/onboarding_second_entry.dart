@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/entry_image_and_text.dart';
+import '../widgets/green_themed_background.dart';
 import '../widgets/header.dart';
 import '../widgets/maroon_themed_background.dart';
 import '../widgets/navigation_buttons.dart';
@@ -27,7 +28,7 @@ class OnboardingSecondEntry extends StatelessWidget {
       alignment: Alignment.center,
       children: <Widget>[
         // Maroon themed background.
-        MaroonThemedBackground(boxConstraints: _boxConstraints),
+        GreenThemedBackground(boxConstraints: _boxConstraints),
 
         // Skip button and page entry indicator.
         const Header(),
