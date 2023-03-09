@@ -17,9 +17,11 @@ class OnboardingScreen extends StatefulWidget {
   final firstEntryDescriptionText =
       'UP-Orgs is a platform that aims to connect people together.';
 
-  final secondEntryImage = '<modify this>';
+  final secondEntryImage =
+      'assets/images/visual_elements/undraw_programming_re_kg9v.svg';
   final secondEntryMainText = 'Join Orgs of your interest';
-  final secondEntryDescriptionText = '<modify this>';
+  final secondEntryDescriptionText =
+      'Improve your skills and share it with other people';
 
   final thirdEntryImage = '<modify this>';
   final thirdEntryMainText = '<modify this>';
