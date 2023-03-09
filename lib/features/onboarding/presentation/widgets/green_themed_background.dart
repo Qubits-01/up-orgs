@@ -18,12 +18,13 @@ class GreenThemedBackground extends StatelessWidget {
       decoration: const BoxDecoration(
         // color: AppColors.maroon,
         gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          stops: [0.3, 0.6, 0.8, 0.9],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.2, 0.4, 0.6, 0.8, 0.9],
           colors: <Color>[
-            Color.fromARGB(255, 124, 255, 203),
-            Color.fromARGB(255, 50, 143, 106),
+            Color.fromARGB(255, 86, 192, 150),
+            Color.fromARGB(255, 66, 146, 114),
+            Color.fromARGB(255, 41, 119, 88),
             Color.fromARGB(255, 34, 90, 68),
             AppColors.green,
           ],
