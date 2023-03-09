@@ -18,7 +18,7 @@ class OnboardingScreen extends StatefulWidget {
       'UP-Orgs is a platform that aims to connect people together.';
 
   final secondEntryImage = '<modify this>';
-  final secondEntryMainText = '<modify this>';
+  final secondEntryMainText = 'Join Orgs of your interest';
   final secondEntryDescriptionText = '<modify this>';
 
   final thirdEntryImage = '<modify this>';
@@ -51,8 +51,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             OnboardingSecondEntry(
               boxConstraints: constraints,
               assetPath: widget.firstEntryImage,
-              mainText: widget.firstEntryMainText,
-              descriptionText: widget.firstEntryDescriptionText,
+              mainText: widget.secondEntryMainText,
+              descriptionText: widget.secondEntryDescriptionText,
             ),
             OnboardingThirdEntry(
               boxConstraints: constraints,
