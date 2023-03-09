@@ -21,7 +21,7 @@ class EntryTextBody extends StatelessWidget {
             mainText,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                  color: Colors.red[100],
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
           ),
@@ -30,7 +30,7 @@ class EntryTextBody extends StatelessWidget {
             descriptionText,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: Colors.red[100],
+                  color: Colors.white,
                   height: 1.75,
                 ),
           ),
