@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:up_orgs/features/onboarding/presentation/screens/persistent_onboarding_screen.dart';
 
 import 'onboarding_first_entry.dart';
 import 'onboarding_second_entry.dart';
 import 'onboarding_third_entry.dart';
+import 'persistent_onboarding_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -30,7 +30,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final pageController = PageController(initialPage: 1);
+  final pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {

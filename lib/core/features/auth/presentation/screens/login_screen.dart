@@ -72,6 +72,7 @@ class LoginScreen extends StatelessWidget {
                             icon: Icon(Icons.email_rounded),
                           ),
                           keyboardType: TextInputType.emailAddress,
+                          textInputAction: TextInputAction.next,
                         ),
                         TextField(
                           decoration: InputDecoration(
@@ -79,6 +80,7 @@ class LoginScreen extends StatelessWidget {
                             icon: Icon(Icons.password_rounded),
                           ),
                           keyboardType: TextInputType.visiblePassword,
+                          textInputAction: TextInputAction.done,
                         ),
                       ],
                     ),
