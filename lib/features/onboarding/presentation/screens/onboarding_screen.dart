@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:up_orgs/constants/colors/app_colors.dart';
 
+import '../../../../constants/colors/app_colors.dart';
 import "../widgets/onboarding_entry.dart";
-
 import 'persistent_onboarding_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {

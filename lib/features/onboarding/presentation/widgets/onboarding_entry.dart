@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'entry_image_and_text.dart';
 import 'header.dart';
-import 'themed_background.dart';
 import 'navigation_buttons.dart';
+import 'themed_background.dart';
 
 class OnboardingEntry extends StatelessWidget {
   const OnboardingEntry({
