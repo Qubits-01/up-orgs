@@ -23,9 +23,11 @@ class OnboardingScreen extends StatefulWidget {
   final secondEntryDescriptionText =
       'Improve your skills and share it with other people';
 
-  final thirdEntryImage = '<modify this>';
-  final thirdEntryMainText = '<modify this>';
-  final thirdEntryDescriptionText = '<modify this>';
+  final thirdEntryImage =
+      'assets/images/visual_elements/undraw_having_fun_re_vj4h.svg';
+  final thirdEntryMainText = 'Invite people to your Org';
+  final thirdEntryDescriptionText =
+      'Build a community with the help of your phone.';
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -58,9 +60,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             OnboardingThirdEntry(
               boxConstraints: constraints,
-              assetPath: widget.firstEntryImage,
-              mainText: widget.firstEntryMainText,
-              descriptionText: widget.firstEntryDescriptionText,
+              assetPath: widget.thirdEntryImage,
+              mainText: widget.thirdEntryMainText,
+              descriptionText: widget.thirdEntryDescriptionText,
             ),
             const PersistentOnboardingScreen(),
           ],
