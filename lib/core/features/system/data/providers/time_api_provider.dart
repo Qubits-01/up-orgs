@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:up_orgs/constants/enums/online_time_source_enum.dart';
-import 'package:up_orgs/core/exceptions/online_time_exception.dart';
 
+import '../../../../../constants/enums/online_time_source_enum.dart';
+import '../../../../exceptions/online_time_exception.dart';
 import '../../domain/entities/coordinate.dart';
 import '../models/online_time_model.dart';
 import 'online_time_provider_intf.dart';
