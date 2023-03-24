@@ -21,7 +21,7 @@ class OnboardingScreen extends StatefulWidget {
       'assets/images/visual_elements/undraw_engineering_team_a7n2.svg';
   final secondEntryMainText = 'Join Orgs of your interest';
   final secondEntryDescriptionText =
-      'Improve your skills and share them with other people';
+      'Develop your skills and share them with other people';
 
   final thirdEntryImage = '<modify this>';
   final thirdEntryMainText = '<modify this>';
