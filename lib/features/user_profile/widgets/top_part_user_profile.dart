@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'settings_button.dart';
 
 class TopPartUserProfile extends StatelessWidget {
   const TopPartUserProfile({super.key});
@@ -8,6 +9,7 @@ class TopPartUserProfile extends StatelessWidget {
       children: const [
         CoverAndProfileImage(),
         NameAndUniversity(),
+        SettingsButton(),
       ],
     );
   }
