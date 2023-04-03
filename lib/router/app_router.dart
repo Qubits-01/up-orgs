@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:up_orgs/features/user_profile/user_profile.dart';
 
 import '../core/features/auth/presentation/screens/forgot_password_screen.dart';
 import '../core/features/auth/presentation/screens/login_screen.dart';
@@ -19,6 +20,10 @@ class AppRouter {
       GoRoute(
         path: SplashScreen.routeName,
         builder: (_, __) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: UserProfile.routeName,
+        builder: (_, __) => const UserProfile(),
       ),
       GoRoute(
         path: OnboardingScreen.routeName,
