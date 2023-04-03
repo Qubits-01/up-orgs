@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'about_tab_user_profile.dart';
+import 'affiliations_tab_user_profile.dart';
 
 class TabBarUserProfile extends StatefulWidget {
   const TabBarUserProfile({super.key});
@@ -41,9 +42,9 @@ class _TabBarUserProfileState extends State<TabBarUserProfile> {
                     child: AboutTab(),
                   ),
                   Container(
-                    child: AffiliationsTab(),
+                    child: const AffiliationsTab(),
                   ),
-                  Center(
+                  const Center(
                     child: Text("Applications Page"),
                   ),
                 ],
