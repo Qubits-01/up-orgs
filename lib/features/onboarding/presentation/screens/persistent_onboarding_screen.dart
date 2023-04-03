@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rive/rive.dart';
+import 'package:up_orgs/features/user_profile/screens/user_profile.dart';
 
 import '../../../../core/features/auth/presentation/screens/login_screen.dart';
 
@@ -80,7 +81,7 @@ class _PersistentOnboardingScreenState
                       width: 200.0,
                       child: ElevatedButton(
                         onPressed: () {
-                          GoRouter.of(context).push(LoginScreen.routeName);
+                          GoRouter.of(context).push(UserProfile.routeName);
                         },
                         style: ElevatedButton.styleFrom(elevation: 0.0),
                         child: const Text('Let\'s Go'),
