@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+import '../settings_pages/personal_details_settings.dart';
 
 class UserProfileSettings extends StatefulWidget {
   const UserProfileSettings({super.key});
@@ -27,7 +28,7 @@ class _UserProfileSettingsState extends State<UserProfileSettings> {
                     Icons.person,
                     color: Color.fromRGBO(102, 0, 0, 1.0),
                   ),
-                  child: SettingsScreen(children: []),
+                  child: PersonalDetailsSettings(),
                 ),
                 SimpleSettingsTile(
                   title: 'Password & Security',

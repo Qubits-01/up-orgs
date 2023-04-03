@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
 import 'firebase_options.dart';
 import 'router/app_router.dart';
@@ -21,6 +22,7 @@ Future<void> main() async {
   await FirebaseAppCheck.instance.activate(
     androidProvider: AndroidProvider.debug,
   );
+  await Settings.init(cacheProvider: SharePreferenceCache());
 
   // Initialize services/dependencies.
   await sl.initializeServices();
