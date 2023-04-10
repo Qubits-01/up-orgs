@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:up_orgs/features/user_profile/widgets/general_settings_group.dart';
 import 'package:up_orgs/features/user_profile/widgets/profile_card.dart';
 
 class UserProfileSettings extends StatefulWidget {
@@ -15,13 +16,15 @@ class _UserProfileSettingsState extends State<UserProfileSettings> {
     return Scaffold(
       appBar: AppBar(title: Text("Profile")),
       body: Container(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: profileCard(),
-            ),
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              profileCard(),
+              SizedBox(height: 20),
+              GeneralSettingsGroup(),
+            ],
+          ),
         ),
       ),
     );

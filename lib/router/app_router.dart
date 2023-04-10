@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:up_orgs/features/user_profile/screens/user_profile.dart';
 import 'package:up_orgs/features/user_profile/screens/user_profile_settings.dart';
+import 'package:up_orgs/features/user_profile/settings_pages/personal_details_settings.dart';
 
 import '../core/features/auth/presentation/screens/forgot_password_screen.dart';
 import '../core/features/auth/presentation/screens/login_screen.dart';
@@ -33,6 +34,10 @@ class AppRouter {
       GoRoute(
         path: UserProfileSettings.routeName,
         builder: (_, __) => const UserProfileSettings(),
+      ),
+      GoRoute(
+        path: PersonalDetailsSettings.routeName,
+        builder: (_, __) => const PersonalDetailsSettings(),
       ),
       GoRoute(
         path: PersistentOnboardingScreen.routeName,
