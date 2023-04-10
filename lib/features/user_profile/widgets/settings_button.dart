@@ -13,7 +13,7 @@ class SettingsButton extends StatelessWidget {
         onPressed: () {
           GoRouter.of(context).push(UserProfileSettings.routeName);
         },
-        child: const Text("User settings"),
+        child: const Text("Edit Profile"),
       ),
     );
   }
