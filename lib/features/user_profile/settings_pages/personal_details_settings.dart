@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:up_orgs/features/user_profile/widgets/interests_checklist.dart';
 import '../widgets/settings_text_field.dart';
 
 class PersonalDetailsSettings extends StatefulWidget {
@@ -18,7 +18,7 @@ class _PersonalDetailsSettingsState extends State<PersonalDetailsSettings> {
       appBar: AppBar(
         title: Text("Profile Settings"),
       ),
-      body: Column(children: [
+      body: ListView(children: [
         SettingsTextField(
           fieldName: "Username",
           initialFieldValue: "John Doe",
@@ -32,6 +32,7 @@ class _PersonalDetailsSettingsState extends State<PersonalDetailsSettings> {
           maxCharacters: 180,
           maxLines: 5,
         ),
+        InterestsSelection(),
       ]),
     );
   }

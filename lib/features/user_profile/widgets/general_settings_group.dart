@@ -22,10 +22,13 @@ class GeneralSettingsGroup extends StatelessWidget {
           ListTile(
             leading: Container(
               child:
-                  Icon(Icons.settings, color: Color.fromRGBO(102, 0, 0, 0.5)),
+                  Icon(Icons.settings, color: Color.fromRGBO(102, 0, 0, 0.8)),
               height: double.maxFinite,
             ),
-            title: Text("Profile Settings"),
+            title: Text(
+              "Profile Settings",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             subtitle: Text("Update and modify your profile"),
             trailing: Icon(Icons.keyboard_arrow_right),
             onTap: () {
@@ -34,7 +37,7 @@ class GeneralSettingsGroup extends StatelessWidget {
           ),
           ListTile(
             leading: Container(
-              child: Icon(Icons.shield, color: Color.fromRGBO(102, 0, 0, 0.5)),
+              child: Icon(Icons.shield, color: Color.fromRGBO(102, 0, 0, 0.8)),
               height: double.maxFinite,
             ),
             title: Text("Security"),
@@ -44,7 +47,7 @@ class GeneralSettingsGroup extends StatelessWidget {
           ListTile(
             leading: Container(
               child: Icon(Icons.remove_red_eye,
-                  color: Color.fromRGBO(102, 0, 0, 0.5)),
+                  color: Color.fromRGBO(102, 0, 0, 0.8)),
               height: double.maxFinite,
             ),
             title: Text("Privacy"),
