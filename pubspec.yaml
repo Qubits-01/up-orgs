@@ -107,8 +107,6 @@ dependencies:
   # A plugin for handling Vibration API on iOS, Android, and web.
   vibration: ^1.7.6
 
-  #A plugin for building settings screens
-  flutter_settings_screens: ^0.3.3-null-safety+2
 
 dev_dependencies:
   flutter_test:
