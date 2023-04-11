@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:up_orgs/features/user_profile/widgets/interests_checklist.dart';
+import '../screens/user_profile_settings.dart';
 import '../widgets/settings_text_field.dart';
 
 class PersonalDetailsSettings extends StatefulWidget {
@@ -33,6 +35,42 @@ class _PersonalDetailsSettingsState extends State<PersonalDetailsSettings> {
           maxLines: 5,
         ),
         InterestsSelection(),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+          child: TextButton(
+            child: Text(
+              "Submit",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              backgroundColor: Color.fromRGBO(10, 68, 36, 1.0),
+              fixedSize: Size(double.maxFinite, 40),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+          child: TextButton(
+            child: Text(
+              "Cancel",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onPressed: () {
+              GoRouter.of(context).push(UserProfileSettings.routeName);
+            },
+            style: TextButton.styleFrom(
+              backgroundColor: Color.fromRGBO(102, 0, 0, 0.9),
+              fixedSize: Size(double.maxFinite, 40),
+            ),
+          ),
+        ),
       ]),
     );
   }

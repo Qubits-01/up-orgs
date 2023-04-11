@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:up_orgs/features/user_profile/widgets/general_settings_group.dart';
 import 'package:up_orgs/features/user_profile/widgets/profile_card.dart';
 
@@ -23,6 +24,26 @@ class _UserProfileSettingsState extends State<UserProfileSettings> {
               profileCard(),
               SizedBox(height: 20),
               GeneralSettingsGroup(),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(8.0, 30.0, 8.0, 0.0),
+                  child: TextButton(
+                    child: Text(
+                      "Logout",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color.fromRGBO(102, 0, 0, 0.9),
+                      fixedSize: Size(double.maxFinite, 40),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

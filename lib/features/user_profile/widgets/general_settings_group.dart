@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:up_orgs/features/user_profile/settings_pages/personal_details_settings.dart';
 
+import '../settings_pages/security_settings.dart';
+
 class GeneralSettingsGroup extends StatelessWidget {
   const GeneralSettingsGroup({super.key});
 
@@ -43,6 +45,9 @@ class GeneralSettingsGroup extends StatelessWidget {
             title: Text("Security"),
             subtitle: Text("Change your password"),
             trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () {
+              GoRouter.of(context).push(SecuritySettings.routeName);
+            },
           ),
           ListTile(
             leading: Container(

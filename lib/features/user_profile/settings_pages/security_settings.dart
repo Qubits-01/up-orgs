@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../screens/user_profile_settings.dart';
 
 class SecuritySettings extends StatefulWidget {
   const SecuritySettings({super.key});
@@ -28,6 +30,42 @@ class _SecuritySettingsState extends State<SecuritySettings> {
             fieldName: "Confirm Password",
             hintText: "Re enter New Password",
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+            child: TextButton(
+              child: Text(
+                "Submit",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                backgroundColor: Color.fromRGBO(10, 68, 36, 1.0),
+                fixedSize: Size(double.maxFinite, 40),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+            child: TextButton(
+              child: Text(
+                "Cancel",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              onPressed: () {
+                GoRouter.of(context).push(UserProfileSettings.routeName);
+              },
+              style: TextButton.styleFrom(
+                backgroundColor: Color.fromRGBO(102, 0, 0, 0.9),
+                fixedSize: Size(double.maxFinite, 40),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -51,6 +89,7 @@ class SecuritySettingsTextField extends StatefulWidget {
 
 class _SecuritySettingsTextFieldState extends State<SecuritySettingsTextField> {
   bool _isVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -74,7 +113,9 @@ class _SecuritySettingsTextFieldState extends State<SecuritySettingsTextField> {
                     _isVisible = !_isVisible;
                   });
                 },
-                icon: const Icon(Icons.remove_red_eye),
+                icon: Icon(
+                  _isVisible ? Icons.visibility_off : Icons.visibility,
+                ),
               ),
             ),
             obscureText: _isVisible,
