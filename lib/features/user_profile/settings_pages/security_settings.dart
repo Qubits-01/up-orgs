@@ -88,7 +88,7 @@ class SecuritySettingsTextField extends StatefulWidget {
 }
 
 class _SecuritySettingsTextFieldState extends State<SecuritySettingsTextField> {
-  bool _isVisible = false;
+  bool _isObscured = true;
 
   @override
   Widget build(BuildContext context) {
@@ -110,15 +110,15 @@ class _SecuritySettingsTextFieldState extends State<SecuritySettingsTextField> {
               suffixIcon: IconButton(
                 onPressed: () {
                   setState(() {
-                    _isVisible = !_isVisible;
+                    _isObscured = !_isObscured;
                   });
                 },
                 icon: Icon(
-                  _isVisible ? Icons.visibility_off : Icons.visibility,
+                  _isObscured ? Icons.visibility_off : Icons.visibility,
                 ),
               ),
             ),
-            obscureText: _isVisible,
+            obscureText: _isObscured,
           )
         ],
       ),
