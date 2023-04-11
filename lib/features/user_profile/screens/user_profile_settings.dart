@@ -24,27 +24,38 @@ class _UserProfileSettingsState extends State<UserProfileSettings> {
               profileCard(),
               SizedBox(height: 20),
               GeneralSettingsGroup(),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(8.0, 30.0, 8.0, 0.0),
-                  child: TextButton(
-                    child: Text(
-                      "Logout",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(102, 0, 0, 0.9),
-                      fixedSize: Size(double.maxFinite, 40),
-                    ),
-                  ),
-                ),
-              ),
+              LogoutButton(),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class LogoutButton extends StatelessWidget {
+  const LogoutButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(8.0, 30.0, 8.0, 0.0),
+        child: TextButton(
+          child: Text(
+            "Logout",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          onPressed: () {},
+          style: TextButton.styleFrom(
+            backgroundColor: Color.fromRGBO(102, 0, 0, 0.9),
+            fixedSize: Size(double.maxFinite, 40),
           ),
         ),
       ),

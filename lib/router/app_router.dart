@@ -13,6 +13,7 @@ import '../features/home/presentation/screens/home_screen.dart';
 import '../features/onboarding/presentation/screens/onboarding_screen.dart';
 import '../features/onboarding/presentation/screens/persistent_onboarding_screen.dart';
 import '../features/splash_startup/presentation/screens/splash_screen.dart';
+import '../features/user_profile/settings_pages/privacy_settings.dart';
 
 /// GoRouter configuration.
 class AppRouter {
@@ -43,6 +44,10 @@ class AppRouter {
       GoRoute(
         path: SecuritySettings.routeName,
         builder: (_, __) => const SecuritySettings(),
+      ),
+      GoRoute(
+        path: PrivacySettings.routeName,
+        builder: (_, __) => const PrivacySettings(),
       ),
       GoRoute(
         path: PersistentOnboardingScreen.routeName,

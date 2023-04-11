@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:up_orgs/features/user_profile/settings_pages/personal_details_settings.dart';
+import 'package:up_orgs/features/user_profile/settings_pages/privacy_settings.dart';
 
 import '../settings_pages/security_settings.dart';
 
@@ -58,6 +59,9 @@ class GeneralSettingsGroup extends StatelessWidget {
             title: Text("Privacy"),
             subtitle: Text("What can other users see from you"),
             trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () {
+              GoRouter.of(context).push(PrivacySettings.routeName);
+            },
           ),
         ],
       ),
