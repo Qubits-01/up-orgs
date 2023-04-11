@@ -27,7 +27,7 @@ class _InterestsChecklistState extends State<InterestsSelection> {
       child: Container(
         child: Column(
           children: [
-            Align(
+            const Align(
               child: Text("Interests"),
               alignment: Alignment.topLeft,
             ),
