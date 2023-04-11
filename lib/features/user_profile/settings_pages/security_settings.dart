@@ -5,12 +5,32 @@ class SecuritySettings extends StatefulWidget {
 
   @override
   State<SecuritySettings> createState() => _SecuritySettingsState();
+
+  static const routeName = '/change_password';
 }
 
 class _SecuritySettingsState extends State<SecuritySettings> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: const Text("Security")),
+      body: ListView(
+        children: [
+          SecuritySettingsTextField(
+            fieldName: "Old Password",
+            hintText: "Enter Old Password",
+          ),
+          SecuritySettingsTextField(
+            fieldName: "New Password",
+            hintText: "Enter New Password",
+          ),
+          SecuritySettingsTextField(
+            fieldName: "Confirm Password",
+            hintText: "Re enter New Password",
+          ),
+        ],
+      ),
+    );
   }
 }
 
